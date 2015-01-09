@@ -1,0 +1,36 @@
+/*------------------------------------*\
+    #Template
+\*------------------------------------*/
+
+
+/**
+ * #Fonts
+ *
+	@import url(//fonts.googleapis.com/css?family=Montserrat:400,700);
+ *
+ */
+
+/**
+ * #SETTINGS
+ */
+@import "_settings.colors";
+@import "_settings.global";
+
+/**
+ * #Tools
+ */
+@import "mixins/css3.scss";
+
+/**
+ * #Vendor
+ *
+	@import "vendor/introjs";
+ *
+ */
+
+/**
+ * #Themes - Default
+ *
+	@import "themes/default/base";
+ *
+ */
