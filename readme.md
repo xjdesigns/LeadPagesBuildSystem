@@ -55,4 +55,4 @@
 	components/teaser/_components.teaser
 
 
- 2. WTF is the difference between objects & components? Need to understand this to properly structure our apps
+ 2. What is the difference between objects & components? Need to understand this to properly structure our apps
