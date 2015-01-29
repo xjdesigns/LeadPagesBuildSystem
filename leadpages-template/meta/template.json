@@ -1,6 +1,6 @@
 {
-    "id": "template-id-01",
-    "name": "Test",
+    "id": "<%= template_id %>",
+    "name": "<%= template_name %>",
     "mobile": true,
     "notes": "Initial Commit",
     "syntax": 4,
