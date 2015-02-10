@@ -15,8 +15,8 @@
 ###Questions / Comments
 
  1. Really need to alias things within a component so we can expose them in globals, much like inuit does
- 2. Do we want to include any base inuit / SASS components? Do we want to create various builds? 
- -- Yes, we should include: 
+ 2. Do we want to include any base inuit / SASS components? Do we want to create various builds?
+ -- Yes, we should include:
 
  	###Base
  	scss/template.scss
@@ -63,7 +63,7 @@
 	components/promo/_components.promo
 	components/testimonial/_components.testimonial
 	components/trust-indicators/_components.trust-indicators
-	
+
 	components/teaser/_components.teaser
 
 

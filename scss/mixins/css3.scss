@@ -1,4 +1,4 @@
-@mixin transition($transition-property, $transition-time: 0.5s, $method: ease-out) {
+@mixin transition($transition-property: all, $transition-time: 0.5s, $method: ease-out) {
     -webkit-transition: $transition-property $transition-time $method;
     -moz-transition: $transition-property $transition-time $method;
     -ms-transition: $transition-property $transition-time $method;
@@ -9,8 +9,4 @@
   opacity: $opacity;
   $opacity-ie: $opacity * 100;
   filter: alpha(opacity=$opacity-ie); //IE8
-}
-@mixin background-opacity($color, $opacity: 0.3) {
-    background: $color; /* The Fallback */
-    background: rgba($color, $opacity);
 }
