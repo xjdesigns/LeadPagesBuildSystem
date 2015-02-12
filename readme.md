@@ -8,6 +8,7 @@ This Build System will work for both existing or new LeadPages&trade; templates.
 2. `git clone https://github.com/LeadPages/LeadPagesBuildSystem.git`
  * Or download a [zip file here](https://github.com/LeadPages/LeadPagesBuildSystem/archive/master.zip) and unzip to **outside** of `leadpages-template` folder
 3. `cd LeadpagesBuildSystem` and run `./install`
+4. `cd ..` to get back to the root directory
 5. Done!
 
 ##Available Gulp Tasks

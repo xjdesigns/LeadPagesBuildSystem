@@ -14,7 +14,7 @@ else
 
 	cp -r * ../
 	cd ..
-	rm -rf LeadPagesBuildSystem && rm install
+	rm -rf LeadPagesBuildSystem && rm ../install
 fi
 
 echo "Done! Happy coding!"
