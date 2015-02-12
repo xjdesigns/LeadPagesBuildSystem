@@ -2,7 +2,7 @@
 
 currentDir=$( echo ${PWD##*/} )
 
-if [ currentDir -ne 'LeadPagesBuildSystem' ]; then
+if [ currentDir != 'LeadPagesBuildSystem' ]; then
 
 
 	# New Template. Switch branch to yeoman to copy the skeleton folders and files
