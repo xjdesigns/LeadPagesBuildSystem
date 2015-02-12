@@ -29,7 +29,7 @@ if [ $currentDir != 'LeadPagesBuildSystem' ]; then
 		git commit -am "Whoohoo\! New Template\!"
 	fi
 else
-	rm -rf .git .gitignore readme.md && \
+	rm -rf .git .gitignore readme.md install && \
 	cp -r * ../
 	cd ..
 	rm -rf LeadPagesBuildSystem
