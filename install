@@ -8,13 +8,11 @@ if [ ! -d "leadpages-template" ]; then
 	mkdir tmp && \
 	git co yeoman && \
 	cp -r ./leadpages-template tmp && \
-	git co master && \
-	cp -r ./tmp/leadpages-template . && \
-	rm -rf .git && rm install && \
-	git init && git add . && git status
-else
-	rm -rf .git && rm install && \
-	git init && git add . && git status
+	git co fork && \
+	cp -r ./tmp/leadpages-template .
 fi
+
+rm -rf .git tmp && rm install && \
+git init && git add . && git status
 
 echo "Done! Happy coding!"
