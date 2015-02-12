@@ -1,58 +1,41 @@
 #Build System
 
-##Questions / Comments
+This Build System will work for both existing or new LeadPages&trade; templates. If you are concern that this will overwrite your existing project, don't worry. The following installation script will check if you have an existing 'leadpages-template' folder, if it does, it'll leave your `leadpages-template` alone and just grab the necessary build system files. Otherwise, it'll grab a new skeleton `leadpages-template` for you.
 
- 1. Really need to alias things within a component so we can expose them in globals, much like inuit does
- 2. Do we want to include any base inuit / SASS components? Do we want to create various builds? 
- -- Yes, we should include: 
+##Installation
 
- 	###Base
- 	scss/template.scss
+### New Template or Existing Template *without* Git ###
 
- 	###Settings
- 	bower_components/inuit-defaults
- 	scss/_settings.colors.scss
- 	scss/_settings.global.scss
- 	bower_components/inuit-responsive-settings
+1. `cd` into your **root** directory where you have the `leadpages-template` folder
+2. `git clone https://github.com/LeadPages/LeadPagesBuildSystem.git .`
+ * Or download a [zip file here](https://github.com/LeadPages/LeadPagesBuildSystem/archive/master.zip) and unzip to **outside** of `leadpages-template` folder
+3. In the terminal, run `./install`
+5. Done!
 
- 	###Tools
- 	bower_components/inuit-functions
- 	bower_components/inuit-mixins
- 	bower_components/inuit-responsive-tools
+### Existing Template with Git
 
- 	###Generic
- 	bower_components/inuit-normalize
- 	bower_components/inuit-box-sizing
+Why? If you are not familiar with git, it won't let you clone the contents of a repo into an existing repo. So this is one way to make sure we don't overwrite any of your stuff.
 
- 	###Base
- 	bower_components/inuit-page
- 	bower_components/inuit-headings
- 	scss/_base
-
- 	###Objects
- 	scss/_objects.wrappers
- 	bower_components/inuit-layout
- 	bower_components/inuit-list-block
- 	bower_components/inuit-list-inline
- 	bower_components/inuit-buttons
-
- 	###Components
-	components/backgrounds/_components.backgrounds
- 	components/countdown/_components.countdown
-	components/css-backgrounds/_components.css-backgrounds
-	components/css-responsive-backgrounds/_components.css-responsive-backgrounds
-	components/header-accent/_components.header-accent
-	components/hero/_components.hero
-	components/image-gallery/_components.image-gallery
-	components/nav/_components.nav
-	components/nav-mobile/_components.nav-mobile
-	components/nav-sticky/_components.nav-sticky
-	components/parallax/_components.parallax
-	components/promo/_components.promo
-	components/testimonial/_components.testimonial
-	components/trust-indicators/_components.trust-indicators
-	
-	components/teaser/_components.teaser
+1. `cd` into your **root** directory where you have the `leadpages-template` folder
+2. `git clone https://github.com/LeadPages/LeadPagesBuildSystem.git`
+ * Or download a copy of the [zip file here](https://github.com/LeadPages/LeadPagesBuildSystem/archive/master.zip) and unzip and copy the contents over
+3. `cd LeadPagesBuildSystem && ./install`
+4. `cd ..` Even after the folders were deleted, it can't `cd` up one level
+5. Done!
 
 
- 2. What is the difference between objects & components? Need to understand this to properly structure our apps
+##Available Gulp Tasks
+
+1. `gulp` (default) : `connect` & `watch`
+2. `gulp concat` : Concatenate files
+3. `gulp html` : Minify html & watch with LiveReload
+4. `gulp sass` : Compile SASS files and output to `/leadpages-template/css/` folder
+4. `gulp less` : Compile LESS files and output to `/leadpages-template/css/` folder
+5. `gulp watch` : Watch files, compile SASS, minify html and watch for changes with LiveReload
+6. `gulp zip` : Zip up the `leadpages-template` folder for easy upload!
+
+##Mock FAQ
+
+##Why are your README are so lame? As in "DUH! Everybody knows that!"
+
+Well, I believe writing docs/README without any skill/knowledge assumptions. So I can use RTFM more often when asked.
