@@ -2,7 +2,7 @@
 
 currentDir=$( echo ${PWD##*/} )
 
-if [ currentDir != 'LeadPagesBuildSystem' ]; then
+if [ $currentDir != 'LeadPagesBuildSystem' ]; then
 
 
 	# New Template. Switch branch to yeoman to copy the skeleton folders and files
@@ -26,7 +26,7 @@ if [ currentDir != 'LeadPagesBuildSystem' ]; then
 
 	if [ ! -d ".git" ]; then
 		git init && git add . && git status && \
-		gc "Whoohoo\! New Template\!"
+		git commit -am "Whoohoo\! New Template\!"
 	fi
 else
 	rm -rf .git .gitignore readme.md && \
