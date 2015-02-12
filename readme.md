@@ -20,7 +20,7 @@ Why have a separate set of instructions? This is one way to make sure we don't o
 2. `git clone https://github.com/LeadPages/LeadPagesBuildSystem`
  * Or download a copy of the [zip file here](https://github.com/LeadPages/LeadPagesBuildSystem/archive/master.zip) and unzip and copy the contents over
 3. `cd LeadPagesBuildSystem && ./install`
-4. `cd ..` Even after the folders were deleted, it can't `cd` up one level
+4. `cd ..` Even after the folders were deleted, it can't `cd` up one level due to security issue
 5. Done!
 
 
@@ -38,4 +38,4 @@ Why have a separate set of instructions? This is one way to make sure we don't o
 
 ##Why are your README are so lame? As in "DUH! Everybody knows that!"
 
-Well, I believe writing docs/README without any skill/knowledge assumptions. So I can use RTFM more often when asked.
+Well, I believe writing docs/README to an audience that without any based skill/knowledge assumptions. So I can use RTFM more often when asked.
