@@ -11,8 +11,9 @@ if [ currentDir != 'LeadPagesBuildSystem' ]; then
 
 		mkdir tmp && \
 		git checkout yeoman && \
-		cp -r ./tmp/leadpages-template ../leadpages-template && \
-		git co master && \
+		cp -r ./leadpages-template ./tmp/leadpages-template && \
+		git co fork && \
+		cp -r ./tmp/leadpages-template ./leadpages-template && \
 		rm install && \
 		rm -rf tmp readme.md
 	else
