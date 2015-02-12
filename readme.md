@@ -5,7 +5,7 @@
 1. On your **root** directory outside of `leadpages-template` folder
 2. `git clone git@github.com:LeadPages/LeadPagesBuildSystem.git .`
  * Or download a [zip file here](https://github.com/LeadPages/LeadPagesBuildSystem/archive/master.zip) and unzip to **outside** of `leadpages-template` folder
-3. `npm install`
+3. In the terminal: `./install`
 4. Done!
 
 ##Available Gulp Tasks
