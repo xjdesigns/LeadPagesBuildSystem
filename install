@@ -13,7 +13,7 @@ if [ ! -d "../leadpages-template" ]; then
 	git init && git add . && git status
 else
 	cp -r * ../ && \
-	cd ../ && rm -rf LeadPagesBuildSystem && \
+	cd ../ && rm -rf LeadPagesBuildSystem
 fi
 
 echo "Done! Happy coding!"
