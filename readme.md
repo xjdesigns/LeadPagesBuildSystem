@@ -7,17 +7,17 @@ This Build System will work for both existing or new LeadPages&trade; templates.
 ### New Template or Existing Template *without* Git ###
 
 1. `cd` into your **root** directory where you have the `leadpages-template` folder
-2. `git clone https://github.com/LeadPages/LeadPagesBuildSystem.git .`
+2. `git clone https://github.com/LeadPages/LeadPagesBuildSystem .` (The **.** after `.git` is important!)
  * Or download a [zip file here](https://github.com/LeadPages/LeadPagesBuildSystem/archive/master.zip) and unzip to **outside** of `leadpages-template` folder
 3. In the terminal, run `./install`
 5. Done!
 
 ### Existing Template with Git
 
-Why? If you are not familiar with git, it won't let you clone the contents of a repo into an existing repo. So this is one way to make sure we don't overwrite any of your stuff.
+Why have a separate set of instructions? This is one way to make sure we don't overwrite any of your stuff.
 
 1. `cd` into your **root** directory where you have the `leadpages-template` folder
-2. `git clone https://github.com/LeadPages/LeadPagesBuildSystem.git`
+2. `git clone https://github.com/LeadPages/LeadPagesBuildSystem`
  * Or download a copy of the [zip file here](https://github.com/LeadPages/LeadPagesBuildSystem/archive/master.zip) and unzip and copy the contents over
 3. `cd LeadPagesBuildSystem && ./install`
 4. `cd ..` Even after the folders were deleted, it can't `cd` up one level
