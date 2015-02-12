@@ -7,13 +7,13 @@ if [ ! -d "../leadpages-template" ]; then
 
 	git checkout yeoman && \
 	cp -r ./leadpages-template ../leadpages-template && \
-	cd ../ && \
+	cd .. && \
 	rm -rf LeadPagesBuildSystem && \
 	rm install && \
 	git init && git add . && git status
 else
 	cp -r * ../ && \
-	cd ../ && rm -rf LeadPagesBuildSystem
+	cd .. && rm -rf LeadPagesBuildSystem && rm install
 fi
 
 echo "Done! Happy coding!"
