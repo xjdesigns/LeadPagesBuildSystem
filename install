@@ -1,20 +1,34 @@
 #!/bin/sh
 
-if [ ! -d "../leadpages-template" ]; then
-	echo "No leadpages-template folder found. Getting a skeleton copy and initializing git."
+currentDir=$( echo ${PWD##*/} )
 
-	git checkout yeoman && \
-	cp -r ./leadpages-template ../leadpages-template && \
-	cd .. && \
-	rm -rf LeadPagesBuildSystem && \
-	rm install && \
-	git init && git add . LeadPagesBuildSystem && git status
+if [ currentDir -ne 'LeadPagesBuildSystem' ]; then
+
+
+	# New Template. Switch branch to yeoman to copy the skeleton folders and files
+	if [ ! -d "leadpages-template" ]; then
+		echo "No leadpages-template folder found. Getting a skeleton copy."
+
+		mdkir tmp && \
+		git checkout yeoman && \
+		mv -r ./tmp/leadpages-template ../leadpages-template && \
+		git co master && \
+		rm install && \
+		rm -rf tmp readme.md
+	else
+		#Existing Template without Git
+		echo "Installing Build System..."
+		rm ../install
+	fi
+
+	if [ ! -d ".git" ]; then
+		git init && git add . LeadPagesBuildSystem && git status
+	fi
 else
-	echo "Installing Build System..."
-
-	cp -r * ../
+	rm -rf .git .gitignore readme.md && \
+	mv * ../
 	cd ..
-	rm -rf LeadPagesBuildSystem && rm ../install
+	rm -rf LeadPagesBuildSystem
 fi
 
 echo "Done! Happy coding!"
