@@ -12,7 +12,7 @@ if [ $currentDir != 'LeadPagesBuildSystem' ]; then
 		mkdir tmp && \
 		git checkout yeoman && \
 		cp -r ./leadpages-template ./tmp/leadpages-template && \
-		git co fork && \
+		git co master && \
 		cp -r ./tmp/leadpages-template ./leadpages-template && \
 		rm -rf ./tmp readme.md
 	else
