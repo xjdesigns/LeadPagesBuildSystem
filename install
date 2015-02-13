@@ -14,20 +14,19 @@ if [ $currentDir != 'LeadPagesBuildSystem' ]; then
 		cp -r ./leadpages-template ./tmp/leadpages-template && \
 		git co master && \
 		cp -r ./tmp/leadpages-template ./leadpages-template && \
-		rm -rf ./tmp readme.md
+		rm -rf ./tmp
 	else
 		#Existing Template without Git
 		echo "Installing Build System..."
-		rm readme.md
 	fi
 	npm install
-	rm -rf .git
+	rm -rf .git install readme && \
+	echo \n\n"node_modules" >> .gitignore && \
+	echo \n\n".DS_Store" >> .gitignore
 
 	if [ ! -d ".git" ]; then
 		git init && git add . && git status
 	fi
-
-	rm install
 else
 	rm -rf .git .gitignore readme.md install && \
 	cp -r * ../
