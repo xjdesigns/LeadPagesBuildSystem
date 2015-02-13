@@ -14,12 +14,12 @@ if [ $currentDir != 'LeadPagesBuildSystem' ]; then
 		cp -r ./leadpages-template ./tmp/leadpages-template && \
 		git co master && \
 		cp -r ./tmp/leadpages-template ./leadpages-template && \
-		rm install && \
-		rm -rf tmp readme.md
+		rm -rf ./tmp readme.md && \
+		rm install
 	else
 		#Existing Template without Git
 		echo "Installing Build System..."
-		rm ../install readme.md
+		rm install readme.md
 	fi
 
 	rm -rf .git
