@@ -38,7 +38,7 @@ else
 	cd ..
 	rm -rf LeadPagesBuildSystem
 
-	echo "${red}Please ${green}cd .. and run ${green}npm install${NC}"
+	echo "${red}Please ${green}cd .. ${green}and run ${green}npm install${NC}"
 fi
 
 echo "${blue}Done! Happy coding!${NC}"

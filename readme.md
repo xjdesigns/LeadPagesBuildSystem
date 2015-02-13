@@ -34,7 +34,8 @@ Why have a separate set of instructions? This is one way to make sure we don't o
  * Or download a copy of the [zip file here](https://github.com/LeadPages/LeadPagesBuildSystem/archive/master.zip) and unzip and copy the contents over
 3. `cd LeadPagesBuildSystem && ./install`
 4. `cd ..` Even after the folders were deleted, it can't `cd` up one level due to security issue
-5. Done!
+5. `npm install`
+6. Done!
 
 
 ##Available Gulp Tasks
