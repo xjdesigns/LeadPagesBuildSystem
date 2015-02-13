@@ -20,7 +20,7 @@ This Build System will work for both existing or new LeadPages&trade; templates.
 If you are starting fresh, try our [yeoman generator](https://github.com/LeadPages/LeadPagesYeoman) that it comes with the LeadPages&trade; Build System!
 
 1. `cd` into your **root** directory where you have the `leadpages-template` folder
-2. `git clone https://github.com/LeadPages/LeadPagesBuildSystem .` (The **.** after `.git` is important!)
+2. `git clone https://github.com/LeadPages/LeadPagesBuildSystem .` (The **.** at the end is important!)
  * Or download a [zip file here](https://github.com/LeadPages/LeadPagesBuildSystem/archive/master.zip) and unzip to **outside** of `leadpages-template` folder
 3. In the terminal, run `./install`
 5. Done!
