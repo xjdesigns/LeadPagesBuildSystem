@@ -12,16 +12,15 @@ if [ $currentDir != 'LeadPagesBuildSystem' ]; then
 		mkdir tmp && \
 		git checkout yeoman && \
 		cp -r ./leadpages-template ./tmp/leadpages-template && \
-		git co master && \
+		git co fork && \
 		cp -r ./tmp/leadpages-template ./leadpages-template && \
 		rm -rf ./tmp readme.md
 	else
 		#Existing Template without Git
 		echo "Installing Build System..."
-		rm readme.md && \
-		npm install
+		rm readme.md
 	fi
-
+	npm install
 	rm -rf .git
 
 	if [ ! -d ".git" ]; then
