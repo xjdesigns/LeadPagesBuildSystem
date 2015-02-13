@@ -33,7 +33,7 @@ Why have a separate set of instructions? This is one way to make sure we don't o
 2. `git clone https://github.com/LeadPages/LeadPagesBuildSystem`
  * Or download a copy of the [zip file here](https://github.com/LeadPages/LeadPagesBuildSystem/archive/master.zip) and unzip and copy the contents over
 3. `cd LeadPagesBuildSystem && ./install`
-4. `cd ..` Even after the folders were deleted, it can't `cd` up one level due to security issue
+4. `cd ..` Even after the folders were deleted, Bash script can only executes in the current directory so it can't `cd` up one level.
 5. `npm install`
 6. Done!
 

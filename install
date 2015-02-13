@@ -33,7 +33,7 @@ if [ $currentDir != 'LeadPagesBuildSystem' ]; then
 	fi
 else
 	echo "${blue}Installing Build System...${NC}"
-	rm -rf .git .gitignore readme.md install && \
+	rm -rf .git readme.md install && \
 	cp -r * ../
 	cd ..
 	rm -rf LeadPagesBuildSystem
