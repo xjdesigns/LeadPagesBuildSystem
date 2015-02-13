@@ -2,12 +2,18 @@
 
 currentDir=$( echo ${PWD##*/} )
 
+red='\033[0;31m'
+green='\033[0,34m'
+blue='\033[0,32m'
+NC='\033[0m' # No Color
+#echo -e "${red}Hello Stackoverflow${NC}"
+
 if [ $currentDir != 'LeadPagesBuildSystem' ]; then
 
 
 	# New Template. Switch branch to yeoman to copy the skeleton folders and files
 	if [ ! -d "leadpages-template" ]; then
-		echo "No leadpages-template folder found. Getting a skeleton copy."
+		echo -e "${green}No leadpages-template folder found. Getting a skeleton copy.${NC}"
 
 		mkdir tmp && \
 		git checkout yeoman && \
@@ -15,10 +21,8 @@ if [ $currentDir != 'LeadPagesBuildSystem' ]; then
 		git co master && \
 		cp -r ./tmp/leadpages-template ./leadpages-template && \
 		rm -rf ./tmp
-	else
-		#Existing Template without Git
-		echo "Installing Build System..."
 	fi
+	echo -e "${blue}Installing Build System...${NC}"
 	npm install
 	rm -rf .git install readme && \
 	echo \n\n"node_modules" >> .gitignore && \
@@ -34,4 +38,4 @@ else
 	rm -rf LeadPagesBuildSystem
 fi
 
-echo "Done! Happy coding!"
+echo -e "${green}Done! Happy coding!${NC}"
