@@ -22,7 +22,7 @@ if [ $currentDir != 'LeadPagesBuildSystem' ]; then
 		cp -r ./tmp/leadpages-template ./leadpages-template && \
 		rm -rf ./tmp
 	fi
-	echo -e "${blue}Installing Build System...${NC}"
+	echo "${blue}Installing Build System...${NC}"
 	npm install
 	rm -rf .git install readme && \
 	echo \n\n"node_modules" >> .gitignore && \
@@ -32,10 +32,13 @@ if [ $currentDir != 'LeadPagesBuildSystem' ]; then
 		git init && git add . && git status
 	fi
 else
+	echo "${blue}Installing Build System...${NC}"
 	rm -rf .git .gitignore readme.md install && \
 	cp -r * ../
 	cd ..
 	rm -rf LeadPagesBuildSystem
+
+	echo "${red}Please ${green}cd .. and run ${green}npm install${NC}"
 fi
 
-echo -e "${green}Done! Happy coding!${NC}"
+echo "${blue}Done! Happy coding!${NC}"
