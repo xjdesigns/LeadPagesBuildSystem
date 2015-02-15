@@ -8,4 +8,6 @@ gulp.task('html', function () {
 
   gulp.src('./leadpages-template/index.html')
     .pipe(connect.reload())
+    .pipe(minify.(opt))
+    .pipe(gulp.dest('./leadpages-template/'))
 });
